@@ -1,6 +1,6 @@
 $(function(){
   var arr =[];
-  var dave = "I'm sorry Dave I can't do that"
+  var dave = "I'm sorry Dave I can't do that";
 //Back End
 //create an array from 0-userInput;
   function count(number) {
@@ -26,13 +26,12 @@ $(function(){
       }
     }
   };
-//finds Daves and replaces them with the users' inputted name
-  function notDave(name) {
-    for (var i = 0; i < arr.length; i++) {
-      if (i%3 && ) {
-        alert(arr[i]);
-        var j = arr[i].split(' ');
-        j.splice(2,1,name)
+//finds Daves and replaces them with nameInput
+  function isDave(nameInput){
+    for (var i = 3; i < arr.length; i+=3) {
+      var check = arr[i].toString().split(" ");
+      if (check.indexOf("Dave") > 0) {
+      arr[i] = "I'm sorry "+nameInput+" I can't do that";
       }
     }
   }
@@ -42,36 +41,11 @@ $(function(){
   $("form").submit(function(event){
     event.preventDefault();
     var userInput = $("input#field1").val();
-    var nameInput = $("inputefield2").val();
+    var nameInput = $("input#field2").val();
     arr = []; //clears the array so user make multiple attempts
     var numbers = count(userInput);
     rules(numbers);
-    notDave(nameInput);
+    isDave(nameInput);
     $("#result").text(arr);
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
