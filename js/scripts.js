@@ -1,7 +1,5 @@
 $(function(){
-  var arr = [];
 //Back End
-
 //create an array from 0-userInput;
   function count(number) {
   for (var i = 0 ; i <= number ; i++) {
@@ -9,7 +7,6 @@ $(function(){
   }
   return arr;
 }
-
 //check indices for 1,2,3 exceptions
   function rules(arr) {
     for (var i = 0; i < arr.length; i++) {
@@ -23,24 +20,23 @@ $(function(){
       } else if (check.indexOf('2') >= 0  &&  check.indexOf('3') < 0) {
         arr.splice(i,1,"Boop");
       } else if (check.indexOf('3') >= 0) {
-        arr.splice(i,1,"I'm sorry Dave I can't do that.");
+        arr.splice(i,1,"I'm sorry Dave I can't do that");
       }
     }
-    console.log(arr)
   }
 
 
-  //Front End
+//Front End
   $("form").submit(function(event){
     event.preventDefault();
-    var userInput = $("input#field1").val()
-    arr = []; //clears the array so user make multiple attempts
+    var userInput = $("input#field1").val();
+    var nameInput = $("inputefield2").val();
+    var arr = []; //clears the array so user make multiple attempts
     var numbers = count(userInput);
     rules(numbers);
     $("#result").text(arr);
   })
-
-
+}
 
 
 
