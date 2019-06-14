@@ -10,24 +10,42 @@
   </head>
   <body>
   <div class="container">
-    <div class="jumbotron">
-      <h1>Hello!</h1>
+    <div class="header">
+      <div class="jumbotron">
+        <p>Hello!</p>
+      </div>
     </div>
     <hr>
-    <form>
-      <div class="form-group">
-        <label for="field1">Please Enter A Number:</label>
-        <input type="number" id="field1">
-      </div>
-      <div class="form-group">
-        <label for="field2">Now Enter Your Name:</label>
-        <input type="text" id="field2">
-      </div>
-      <button type="submit" name="button">Click here!</button>
-    </form>
     <hr>
-    <div class="output">
-      <h2 id="result"> </h2>
+    <div class="row">
+      <div class="col-md-8">
+        <h2 id="result"> </h2>
+      </div>
+      <div class="col-md-4">
+        <form>
+          <h2>I will count for you!</h2>
+          <hr>
+          <hr>
+          <div class="form-group">
+            <label for="field1">Please Enter A Number:
+              <input type="number" id="field1">
+            </label>
+          </div>
+          <hr>
+          <hr>
+          <div class="form-group">
+            <label for="field2">Now Enter Your Name:
+              <input type="text" id="field2">
+            </label>
+          </div>
+          <hr>
+          <hr>
+          <button type="submit" name="button">Click</button>
+        </form>
+        <div class="longtime">
+          <p class="col-md-6">It's still going huh</p>
+        </div>
+      </div>
     </div>
   </div>
   </body>

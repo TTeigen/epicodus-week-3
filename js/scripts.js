@@ -37,15 +37,24 @@ $(function(){
   }
 
 
+
 //Front End
   $("form").submit(function(event){
     event.preventDefault();
     var userInput = $("input#field1").val();
+    if (userInput > 500) {
+      $(".longtime").show();
+    }
     var nameInput = $("input#field2").val();
     arr = []; //clears the array so user make multiple attempts
-    var numbers = count(userInput);
-    rules(numbers);
-    isDave(nameInput);
-    $("#result").text(arr);
+    if (!nameInput) {
+      alert("Please enter your name! It's important :)");
+    } else {
+      var numbers = count(userInput);
+      rules(numbers);
+      isDave(nameInput);
+      $("#result").text(arr);
+      $("form")[0].reset();
+    }
   })
 });

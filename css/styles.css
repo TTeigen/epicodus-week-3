@@ -1,22 +1,63 @@
 body {
   background-color: darkgrey;
 }
+.header {
+  background: black;
+}
 .jumbotron {
   margin:auto;
   width:100%;
-  text-align: center;
   font-family:cursive;
-  background: rgba(50, 0, 0, 0.5);
-  text-shadow: .5px .5px 2px grey;
+  background: black;
+  font-size: 30px;
+  text-align: center;
+  height: 120px;
+  border-radius: 50%;
+  color: white;
+  cursor:pointer;
 }
-
+.jumbotron:active {
+  background-image: url("img/roboeye.gif");
+  background-size: 90%;
+  background-position: center;
+  font-size: 60px;
+  color: white;
+  text-shadow: 5px 5px 8px black;
+  padding-top: 2%;
+  height: 120px;
+}
 form {
  text-align: center;
  font-weight: bold;
+ background: rgba(208, 200, 176, 0.5);
+ padding: 5px;
+ padding-top: 60px;
+ border-radius: 20%;
+ float: right;
+ height: 500px;
+}
+input {
+  border: 2px groove black;
 }
 #field2 {
   margin-left: 5px;
 }
 #result{
   font-family: monospace;
+  word-wrap: break-word;
+  min-height: 500px;
+  border: 3px outset black;
+  padding: 2%;
+  background: rgba(255, 255, 255, 0.1);
+}
+button {
+  background-image: url("img/btngif.gif");
+  color: white;
+  width: 200px;
+}
+.longtime {
+  display: none;
+  color: crimson;
+  float: right;
+  margin-top: 2000px;
 }
